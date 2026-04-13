@@ -5,7 +5,7 @@
 
 ##### Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép truy cập SSH vào Ubuntu từ cmd của windows:
 ###### Truy cập SSH vào Ubuntu từ cmd:
-<img width="661" height="306" alt="image" src="https://github.com/user-attachments/assets/ece7670f-847e-4193-8558-db79a94781c0" />
+<img width="656" height="515" alt="Cấu hình để SSH từ Windows CMD - Screenshot 2026-04-13 031925" src="https://github.com/user-attachments/assets/0f4842bb-0970-4e90-ac49-c4ed0664a051" />
 
 ## 2. các lệnh cơ bản của docker:
 ###### Liệt kê các file trong thư mục: ls
@@ -32,4 +32,10 @@
 ## 3. Cài đặt docker cho Ubuntu
 ## 4. Phiên bản docker:
 <img width="392" height="39" alt="image" src="https://github.com/user-attachments/assets/7b2715d6-a756-4921-b977-0b2d4fd82ad4" />
-## 
+
+## 5. Cấu hình để docker chạy mà không cần tiền tố sudo
+<img width="439" height="59" alt="Cấu hình để docker chạy mà không cần tiền tố sudo - Screenshot 2026-04-13 032609" src="https://github.com/user-attachments/assets/9845dc66-52ee-4046-9f4f-80d491e75299" />
+
+## 6. Tìm hiểu tập lệnh của docker và docker compose
+
+## 7. Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
