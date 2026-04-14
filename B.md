@@ -36,6 +36,5 @@
 ## 5. Cấu hình để docker chạy mà không cần tiền tố sudo
 <img width="439" height="59" alt="Cấu hình để docker chạy mà không cần tiền tố sudo - Screenshot 2026-04-13 032609" src="https://github.com/user-attachments/assets/9845dc66-52ee-4046-9f4f-80d491e75299" />
 
-## 6. Tìm hiểu tập lệnh của docker và docker compose
-
 ## 7. Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
+<img width="417" height="165" alt="80 1880 9630" src="https://github.com/user-attachments/assets/c2f43bf3-53c0-46b1-9aea-4e178d056c97" />
