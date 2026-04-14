@@ -13,9 +13,50 @@
 - Mount thư mục ./myweb thành thư mục /myweb trong nginx
 - Mount file ./nginx/nginx.conf vào file /etc/nginx/nginx.conf trong nginx
 <img width="727" height="673" alt="image" src="https://github.com/user-attachments/assets/fc553e45-47cd-442f-aa05-3c0e06151b9a" />
-'''
-
-'''
+```
+services:
+  nodered:
+    image: nodered/node-red:latest
+    container_name: nodered_k3y4_bt1
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered:/data
+    # Healthcheck để đảm bảo Node-RED chạy ổn định trước khi các dịch vụ khác khởi động
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1880/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    restart: unless-stopped
+    networks:
+      - my-network
+  
+  myapi:
+    image: alpine:latest  # Thay thế 'build: ./myapi'
+    container_name: myapi_k3y4_bt1
+    ports:
+      - "9630:9630"
+      
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_k3y4_bt1
+    ports:
+      - "81:80"
+    volumes:
+      - ./myweb:/myweb:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      nodered:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - my-network
+```
 #### Edit file ./nginx/nginx.conf để: Cấu hình web server cổng 80 server_name là sub-domain (sub-domain tuỳ ý của em) location / trỏ tới root là thư mục /myweb location /api dùng proxy_pass trỏ tới 1 (hoặc nhiều) node http_in của nodered
 <img width="521" height="396" alt="image" src="https://github.com/user-attachments/assets/d549b695-a686-44d5-9c02-b96ffe3e2c87" />
 
