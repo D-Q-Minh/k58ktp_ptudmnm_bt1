@@ -64,3 +64,10 @@ networks:
   my-network:
     driver: bridge
 ```
+#### Sử dụng nodered: kéo nodered http_in , http_response, function : để tạo api get đơn giản (dùng cho /api proxy_pass của nginx)
+<img width="824" height="162" alt="image" src="https://github.com/user-attachments/assets/9e09627f-f037-4a88-8b9d-7ee97f360f21" />
+
+#### Sửa file ./myweb/index.html : thêm code html+js để sử dụng được api đã khai báo proxy_pass (thực ra là sử dụng nodered http_in hoặc sử dụng service myapi)
+<img width="541" height="523" alt="image" src="https://github.com/user-attachments/assets/83c30499-d409-448c-a7e8-d7a687654fcb" />
+###### gọi api để tải ảnh lên
+<img width="421" height="386" alt="image" src="https://github.com/user-attachments/assets/398ff203-0672-44fc-be52-7ed066fc610a" />
