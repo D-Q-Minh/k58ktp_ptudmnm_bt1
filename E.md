@@ -7,7 +7,7 @@
 
 <img width="1352" height="182" alt="image" src="https://github.com/user-attachments/assets/acd3e15d-2a1f-43f6-b565-09ecbeead633" />
 
-'''
+```
 services:
   nodered:
     image: nodered/node-red:latest
@@ -63,4 +63,4 @@ services:
 networks:
   my-network:
     driver: bridge
-'''
+```
