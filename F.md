@@ -8,7 +8,7 @@ Thực chất trong quá trình làm xảy ra rất nhiều lỗi, trong đó kh
 
 sudo: Chạy lệnh với quyền quản trị cao nhất (root). Bạn cần quyền này vì việc thay đổi chủ sở hữu các tệp tin hệ thống hoặc của người dùng khác bị hạn chế. chown: Viết tắt của "change owner". Đây là lệnh dùng để thay đổi chủ sở hữu (user) và nhóm sở hữu (group) của tệp tin hoặc thư mục. -R: Viết tắt của "Recursive" (đệ quy). Tham số này cực kỳ quan trọng: nó áp dụng thay đổi cho thư mục nodered và tất cả các tệp/thư mục con bên trong nó. 1000:1000: Số 1000 đầu tiên là UID (User ID): Định danh của người dùng. Trong nhiều hệ thống Linux (như Ubuntu, Debian), 1000 thường là ID của người dùng đầu tiên được tạo ra. Số 1000 thứ hai là GID (Group ID): Định danh của nhóm người dùng. Dấu : ngăn cách giữa User và Group. nodered: Tên của thư mục hoặc tệp tin mà bạn muốn áp dụng thay đổi.
 
-Thêm healthcheck cho myapi trong file docker-compose.yml healthcheck: test: ["CMD", "curl", "-f", "http://localhost:9630"]
+#### Thêm healthcheck cho myapi trong file docker-compose.yml healthcheck: test: ["CMD", "curl", "-f", "http://localhost:9630"]
 ```
 healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:1880/"]
@@ -23,8 +23,9 @@ healthcheck:
     networks:
       - my-network
 ```
-thêm healthcheck và deaploy:
+
+#### thêm healthcheck và deaploy:
 <img width="669" height="237" alt="image" src="https://github.com/user-attachments/assets/b5b01f12-73cc-4761-af53-d4ea57b418a8" />
 
-sử dụng lệnh: docker stats để quan sát lượng ram sử dụng bởi mỗi service (các thông số sẽ thay đổi theo thời gian):
+#### sử dụng lệnh: docker stats để quan sát lượng ram sử dụng bởi mỗi service (các thông số sẽ thay đổi theo thời gian):
 <img width="1034" height="104" alt="image" src="https://github.com/user-attachments/assets/c2e68601-4c4d-48b1-8e1f-163c5bb04394" />
