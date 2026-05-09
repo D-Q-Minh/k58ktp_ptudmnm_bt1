@@ -61,4 +61,7 @@ http {
 <img width="418" height="96" alt="docker compose up -d (co cloudflared)" src="https://github.com/user-attachments/assets/6d80b5f5-cacc-4d92-a1b1-3655ea43cbf8" />
 
 
-### 
+## CẬP NHẬT:
+###### hạn nộp bài, em kiểm tra nhưng web không lên
+###### sau kiểm tra lại thì web đã lên, kiểm tra thiết bị sử dụng mạng khác đã vào được web
+<img width="460" height="436" alt="image" src="https://github.com/user-attachments/assets/c0e39469-5877-4bb6-918c-0ccf1768ac95" />
